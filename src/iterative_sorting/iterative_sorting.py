@@ -12,9 +12,11 @@ def selection_sort(arr):
         # TO-DO: find next smallest element
         # (hint, can do in 3 loc)
         for k in range(cur_index+1, len(arr)):
+            # starting with element to the right of current element i, compare to i and grab index
             if arr[k] < arr[smallest_index]:
                 smallest_index = k
         # TO-DO: swap
+        # based on saved index swap into place
         if smallest_index != cur_index:
             arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
 
@@ -22,7 +24,7 @@ def selection_sort(arr):
 
 
 # Notes / testing
-
+    # print(arr[k])
     # if arr[smallest_index] < arr[i]:
     # smallest_index = i
     # arr.insert(smallest_index, arr[i])
@@ -33,7 +35,7 @@ def selection_sort(arr):
 # arr2 = []
 # arr3 = [0, 1, 2, 3, 4, 5]
 # arr4 = random.sample(range(200), 50)
-# print(selection_sort(arr3))
+# print(selection_sort(arr1))
 # print(arr1)
 
 
